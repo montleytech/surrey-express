@@ -244,5 +244,9 @@
       clickable: true
     }
   });
+ 
+window.onload=function(){
+  document.getElementById("defaultMenu").click();
+};
 
 })()
