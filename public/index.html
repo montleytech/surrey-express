@@ -1,89 +1,1477 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.6.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.6.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.6.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <title>Surrey Express</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center fixed-top topbar-transparent">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
+      <i class="bi bi-phone d-flex align-items-center"><span>+1 6045928900</span></i>
+      <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center">
+        <span>Mon, Wed, Thu, Sun 10 am to 8.00 pm. Fri & Sat 10 am to 9 pm. Tue Holiday</span>
+      </i>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+      <div class="logo me-auto">
+        <h1><a href="index.html">Surrey Express</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
+          <li><a class="nav-link scrollto" href="#events">Events</a></li>
+          <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#book-a-table" class="book-a-table-btn scrollto">Book a table</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background: url(assets/img/slide/slide-1.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">
+                  <span>Surrey</span> Express</h2>
+                <p class="animate__animated animate__fadeInUp">
+                  At Surrey Express, we wish to offer our personal rendition of 
+                  Indian cuisine with an innovative gastronomic take on traditional cooking methods, 
+                  fine Indian produce and the legacy of our shared food heritage. 
+                  Moreover, we regard it as a personal challenge to help bring about a revival of 
+                  cuisine and let its distinctive flavours and particular regional character 
+                  brighten up the world
+                </p>
+                <div>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background: url(assets/img/slide/slide-2.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Surrey Express</h2>
+                <p class="animate__animated animate__fadeInUp">
+                  Everything we do is about you. From chefs who create exciting new flavors, 
+                  to crew members who know exactly how you want your drink – we prioritize 
+                  what you need to get you on your way. 
+                  We strive to keep you at your best, and we remain loyal to you, your tastes and your time. 
+                </p>
+                <div>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Whu Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Why choose <span>Our Restaurant</span></h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box">
+              <span>01</span>
+              <h4>Indo-Chinese cuisine</h4>
+              <p>Within Indo-Chinese food, typical spices include cumin, coriander seeds, hot chilli, 
+                ginger, garlic, black peppercorns, and yoghurt.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>02</span>
+              <h4>Unique Dessert</h4>
+              <p>We all need dessert. It's as simple as that.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box">
+              <span>03</span>
+              <h4>Delivery</h4>
+              <p>Food at your door-steps</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Whu Us Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 style="color: white;">Check our tasty <span>Menu</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <!-- <li data-filter="*" class="filter-active">Show All</li> -->
+              <li data-filter=".filter-veg-pakora" id="defaultMenu" class="filter-active">Veg Pakora Menu</li>
+              <li data-filter=".filter-non-veg-pakora">Non-Veg Pakora Menu</li>
+              <li data-filter=".filter-street-veg">Street Food(Veg)</li>
+              <li data-filter=".filter-special-chat">Special Chat's</li>
+              <li data-filter=".filter-fast-food-nonveg">Street Food(Non-Veg)</li>
+              <li data-filter=".filter-combo">Special Combos</li>
+              <li data-filter=".filter-main-veg">Main Course(Veg)</li>
+              <li data-filter=".filter-main-non-veg">Main Course(Non-Veg)</li>
+              <li data-filter=".filter-breads">Breads</li>
+              <li data-filter=".filter-rice">Rice</li>
+              <li data-filter=".filter-raita">Raita</li>
+              <li data-filter=".filter-sweet">Chef's Special Sweet</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" id="menu-container">
+          <!-- Veg Pakora Menu Starts -->
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Veg Samosa</a><span>$0.75</span>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Paneer Samosa</a><span>$1.50</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Veg Pakora</a><span>$5</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Amritsari Potato Fingers</a><span>$5</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Bread Stuffed Pakora</a><span>$6</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Palak Pakora</a><span>$6</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Chilli Pakora</a><span>$6</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Dal Pakora</a><span>$8</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Spring Role(10)</a><span>$8</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Paneer Pakora</a><span>$9</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Amritsari Paneer Fingers</a><span>$9</span>
+            </div>
+            
+          </div>
+          <!-- Veg Pakora Menu Ends -->
+          <!-- Non-Veg Pakora Menu Starts -->
+          <div class="col-lg-6 menu-item filter-non-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Fish Pakora</a><span>$10</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-non-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Chicken Pakora</a><span>$10</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-non-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Chicken Tikka</a><span>$12</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-non-veg-pakora">
+            <div class="menu-content">
+              <a href="#">Fish Tika</a><span>$12</span>
+            </div>
+            
+          </div>
+          <!-- Non-Veg Pakora Menu Ends -->
+
+          <!-- Street Food(Veg) Menu Starts -->
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Gol Gappe With Sweet & Spicy Water (6 pieces) </a>
+              <span>$5</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Special Dahi Gol Gappe</a><span>$5</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Burger With Patty</a><span>$6</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Noodle Burger</a><span>$6</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Choley Bhature/ Puri</a><span>$7</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Paneer Chilli Sandwitch</a><span>$7</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Burger with Patty + Noodles</a><span>$7</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Manchuria With Gravy</a><span>$8</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Special Amritsari Kulcha</a><span>$8</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Hakka Noodles</a><span>$9</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Veg Manchuria Dry</a><span>$9</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Paneer Wrap</a><span>$9</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Paneer Chilli</a><span>$10</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-street-veg">
+            <div class="menu-content">
+              <a href="#">Paneer Tika</a><span>$12</span>
+            </div>
+            
+          </div>
+          <!-- Street Food(Veg) Menu Ends -->
+
+          <!-- Special Chats Menu Starts -->
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Papri Chat</a><span>$5</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Fruit Chat</a><span>$5</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Aloo Chat</a><span>$5</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Tikki Chat</a><span>$5</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Bhala Chat</a><span>$6</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Shakargandi Chat</a><span>$6</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-special-chat">
+            <div class="menu-content">
+              <a href="#">Samosa Chole</a><span>$6</span>
+            </div>
+            
+          </div>
+          <!-- Special Chats Menu Ends -->
+          <!-- Street food Non-Veg Menu Starts -->
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Burger</a><span>$7</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Burger Patty + Noodles</a><span>$8</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Tikka Wrap</a><span>$10</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Tikka Wrap</a><span>$10</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Noodles</a><span>$11</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Wings</a><span>$12</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chilli Chicken</a><span>$12</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-fast-food-nonveg">
+            <div class="menu-content">
+              <a href="#">Chicken Fish</a><span>$12</span>
+            </div>
+            
+          </div>
+           <!-- Street food Non-Veg Menu Ends -->
+           <!-- Combo Menu Starts -->
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Veg Burger With Patty + Fries + Pop Can</a>
+              <span>$8.99</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Veg Burger with Patty + Noodles + Fries + Pop Can</a>
+              <span>$9.99</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Chicken Burger with Patty + Fries + Pop Can</a>
+              <span>$9.99</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Gol Gappe(6 pieces) + Bhala Chat + Chat Papri + 2 Pop Cans</a>
+              <span>$14.99</span>
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Masala Fries + Veg Noodles + Veg Manchuria Gravy + 2 Pop Cans</a>
+              <span>$19.99</span>
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Chicken Burger + Chicken Noodles + Chilli Chicken</a>
+              <span>$24.99</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-combo">
+            <div class="menu-content">
+              <a href="#">Buy any curry get NAAN free. These combos are limited time offer</a>
+            </div>
+          </div>
+          <!-- Combo Menu Ends -->
+          <!-- Main Course Veg Starts -->
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Dal Makhni</a>
+              <span>$11</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Mix Veg</a>
+              <span>$11</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Shahi Paneer</a>
+              <span>$12</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Paneer Makhni</a>
+              <span>$12</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Handi Paneer</a>
+              <span>$12</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-veg">
+            <div class="menu-content">
+              <a href="#">Malai Kofta</a>
+              <span>$12</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <!-- Main Course Veg Ends -->
+          <!-- Main Course Non-Veg Starts -->
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Butter Chicken</a>
+              <span>$14.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Curry Chicken</a>
+              <span>$14.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Handi Chicken</a>
+              <span>$14.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Goat Curry</a>
+              <span>$15.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Lamb Curry</a>
+              <span>$15.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-main-non-veg">
+            <div class="menu-content">
+              <a href="#">Handi Goat</a>
+              <span>$15.99</span>
+            </div>
+            <div class="menu-ingredients">
+              All regular size + $3 for Large
+            </div>
+          </div>
+          <!-- Main Course Non-Veg Ends -->
+          <!-- Breads Menu Starts -->
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Tandoori Roti</a>
+              <span>$1.00</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Plain Naan</a>
+              <span>$1.50</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Butter Naan</a>
+              <span>$2.00</span>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Lachha Paratha</a>
+              <span>$2.00</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Garalic Naan</a>
+              <span>$2.50</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-breads">
+            <div class="menu-content">
+              <a href="#">Spinach Panner Naan</a>
+              <span>$4.00</span>
+            </div>
+            
+          </div>
+          <!-- Breads Menu Ends -->
+          <!-- Rice Menu Starts -->
+          <div class="col-lg-6 menu-item filter-rice">
+            <div class="menu-content">
+              <a href="#">Plain Rice</a>
+              <span>$4.99</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-rice">
+            <div class="menu-content">
+              <a href="#">Jeera Rice</a>
+              <span>$5.99</span>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-rice">
+            <div class="menu-content">
+              <a href="#">Pulao Rice</a>
+              <span>$6.99</span>
+            </div>
+            
+          </div>
+          <!-- Rice Menu Ends -->
+          <!-- Raita Menu Starts -->
+          <div class="col-lg-6 menu-item filter-raita">
+            <div class="menu-content">
+              <a href="#">Plain Dahi</a><span>$4.00</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div>
+          <div class="col-lg-6 menu-item filter-raita">
+            <div class="menu-content">
+              <a href="#">Mix Raita</a><span>$6.00</span>
+            </div>
+            
+          </div>
+          <!-- Raita Menu Ends -->
+          <!-- Sweets Menu Starts -->
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Sugar Free Barfi</a>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Sugar Free Kalakand</a>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Dal Di Jalebi with Rabri</a>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Garam Gajrela</a>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Dikhe wali Kulfi</a>
+            </div>
+            
+          </div>
+          <div class="col-lg-6 menu-item filter-sweet">
+            <div class="menu-content">
+              <a href="#">Milk Badam</a>
+            </div>
+            
+          </div>
+          <!-- Sweets Menu Ends -->
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+    <!-- ======= Specials Section ======= -->
+    <section id="specials" class="specials">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Check our <span>Specials</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  Curry Chicken
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  Chilli Chicken
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  Hakka Veg Noodle
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                  Veg Pakora
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
+                  Butter Chicken
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
+                  Fish Pakkora
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-7">
+                  Gol Gappe
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-8">
+                  Amritsari Kulcha
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-9">
+                  Paneer Makhni
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-10">
+                  Dahi Bhalla
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-11">
+                  Paneer Pakora
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Curry Chicken</h3>
+                    <p class="fst-italic">
+                      A typical curry from the Indian subcontinent consists of chicken 
+                      stewed in an onion- and tomato-based sauce, flavoured with ginger, 
+                      garlic, tomato puree, chilli peppers and a variety of spices, often 
+                      including turmeric, cumin, coriander, cinnamon, and cardamom.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/curry-chicken.png" style="border-radius: 60%;"
+                      alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Chilli Chicken</h3>
+                    <p class="fst-italic">
+                      Chilli chicken is a sweet, spicy & slightly sour crispy appetizer made with chicken, 
+                      bell peppers, garlic, chilli sauce & soya sauce. Boneless cubes are marinated in soya sauce, chili sauce and pepper. 
+                      Then deep fried until crisp. Later they are seasoned again in flavorful sauces.
+                    </p>
+                    <p>
+                      This chilli chicken has a burst of flavors & tastes delicious. 
+                      These tender bites taste mildly hot, sweet and sour. It is best served hot as an appetizer.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/chilli-chicken.png" alt="" class="img-fluid"
+                    style="border-radius: 60%;">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Hakka Noodles</h3>
+                    <p class="fst-italic">
+                      Hakka noodles are Indian-Chinese style noodles made with unleavened refined wheat flour. 
+                      These are boiled al dente and then stir fried in a Chinese wok with oil, vegetables & soya sauce. 
+                    </p>
+                    <p>
+                      Here hakka noodles refers to both the final dish and the type of noodles used.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/hakka-veg-noodle.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Veg Pakora</h3>
+                    <p class="fst-italic">
+                      Veg Pakora is deep fried fritters made using gram flour or besan. 
+                      This Pakora are unique and are so crunchy, 
+                      light, delicious & addictive. 
+                    </p>
+                    <p>The best part is that they stay crunchy for the next few hours without 
+                      turning soggy.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/veg-pakora.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Butter Chicken</h3>
+                    <p class="fst-italic">If Italy gave world the pizza, India did the same with butter chicken. 
+                      This mild and creamy preparation of juicy chicken chunks in a delicious and buttery gravy made 
+                      from white butter, tomato puree, fresh cream, cumin seeds, red chili powder and sugar is a 
+                      trademark Punjab dish. </p>
+                    <p>Family lunches or dinners are complete only when this dish is on the menu.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/butter-chicken.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-6">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Fish Pakora</h3>
+                    <p class="fst-italic">
+                      Fish Pakora is deep fried fritters made using gram flour or besan. 
+                      This Pakora are unique and are so crunchy, 
+                      light, delicious & addictive. 
+                    </p>
+                    <p>It is a popular Indian street food and restaurant style fish appetizer 
+                      with bursting flavors that comes from the unique combo of spices and herbs used.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/fish-pakora.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-7">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Gol gappa</h3>
+                    <p class="fst-italic">Gol gappa (also known as pani puri) is a popular bite-size 
+                      chaat consisting of a hollow, crispy-fried puffed ball that is filled with potato, 
+                      chickpeas, onions, spices, and flavoured water, usually tamarind or mint, and 
+                      popped into one's mouth whole.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/gol-gappe.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-8">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Amritsari Kulcha</h3>
+                    <p class="fst-italic">Amritsari Kulcha is crisp as well as soft leavened bread which is stuffed with boiled 
+                      and mashed potatoes and spices. This bread is similar to Naan.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/amritsari-kulcha.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-9">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Paneer makhani</h3>
+                    <p class="fst-italic">Paneer makhani is a delicious curry made by cooking paneer in buttery tomato cashew gravy. 
+                      This super delicious creamy paneer makhani is loved by most Indians</p>
+                    <p>
+                      Paneer makhani goes so well with plain basmati rice, parantha or naan
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/panner-makani.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-10">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Dahi Bhalla</h3>
+                    <p class="fst-italic">
+                      Dahi Bhalla is a popular form of chaat. 
+                      All chaats are believed to have their source in some or the other bylanes of old towns.
+                    </p>
+                    <p>
+                      Using curd, herbs and spices to improve the digestion.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/dahi-bhalla.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-11">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Paneer Pakora</h3>
+                    <p class="fst-italic">
+                      Paneer Pakora is deep fried fritters made using gram flour or besan. 
+                      This Pakora are unique and are so crunchy, 
+                      light, delicious & addictive. 
+                    </p>
+                    <p>It is a popular Indian street food and restaurant style fish appetizer 
+                      with bursting flavors that comes from the unique combo of spices and herbs used.</p>
+                  </div>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/paneer-pakora.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Specials Section -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Organize Your <span>Events</span> in our Restaurant</h2>
+        </div>
+
+        <div class="events-slider swiper-container">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-12">
+                  <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-12">
+                  <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="row event-item">
+                <div class="col-lg-12">
+                  <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-a-table" class="book-a-table">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Book a <span>Table</span></h2>
+        </div>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Book A Table Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container-fluid">
+
+        <div class="section-title">
+          <h2>Some photos from <span>Our Restaurant</span></h2>
+          <p>Due to Covid Restriction we are confining our services only for Take-Away & Online Delivery </p>
+        </div>
+
+        <!-- <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Chefs Section ======= -->
+    <section id="chefs" class="chefs">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Proffesional <span>Chef</span></h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="assets/img/chefs/chef.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Danial Punni</h4>
+                <span>Master Chef</span>
+                <div class="social">
+                  <a><i class="bi bi-twitter"></i></a>
+                  <a><i class="bi bi-facebook"></i></a>
+                  <a><i class="bi bi-instagram"></i></a>
+                  <a><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 d-flex flex-column justify-content-center align-items-stretch">
+
+            <div class="content">
+              <p class="fst-italic">
+                Chef name is Mr Danial Punni.  He born and brought up in Punjab, India. 
+                He belongs from Farmers family. He finished his study in Phagwara. 
+                From the childhood his interest is in Hospitality Line. 
+                He learned most his cooking from his Grandfather he was a great Chef in his area 
+                and his father was a Farmer. He got cooking skill as his heritage. 
+                So after finishing his graduation, he start working with Grand father. 
+                When his family found his interest is in cooking line so they put him into 
+                institute to do Hospitality Management. 
+                After he finishing his diploma, he start working as a Sekhon Grand, 
+                Dolphin and he got experience from lots of Famous Restaurants. 
+                He came to Canada in 2005 as a Chef in Edmonton. He worked in Edmonton as head chef. 
+                His specialist is in Indian Sweets, Curries and Indi Chinese Fast food. 
+                He was Running his own Food truck in Calgary. 
+                Now he came to Surrey to show his talent.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container position-relative">
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><span>Contact</span> Us</h2>
+        </div>
+      </div>
+
+      <div class="map">
+       
+      <iframe style="border:0; width: 100%; height: 350px;" 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11523.67550194712!2d-79.5013384!3d43.7745428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x572cb19952bcaea0!2sIndian%20Flavour!5e0!3m2!1sen!2sin!4v1621285820078!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container mt-5">
+
+        <div class="info-wrap">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 info">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>4700 Keele St, North York, ON M3J 1P3, Canada</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-clock"></i>
+              <h4>Open Hours:</h4>
+              <p>Mon, Wed, Thu, Sun 10 am to 8.00 pm. Fri & Sat 10 am to 9 pm. Tue Holiday</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>Surreyexpress5@gmail.com</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+1 6045928900</p>
+            </div>
+          </div>
+        </div>
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Surrey Express</h3>
+      <p>An Indo-Chinese cuisine restaurant with a wide range of curries and sweets on serving</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Surrey Express</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.6.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+</body>
+
 </html>

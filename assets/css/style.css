@@ -621,7 +621,11 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: #fffaf3;
+  /* background: #fffaf3; */
+  background: url(../img/about-background.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
 }
 
 .about .content {
@@ -631,7 +635,7 @@ section {
 .about .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color: #5f5950;
+  color: #ffb03b;
 }
 
 .about .content h4 {
@@ -642,7 +646,6 @@ section {
 
 .about .content p {
   font-size: 15px;
-  color: #848484;
 }
 
 .about .content ul {
@@ -835,6 +838,16 @@ section {
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
+/* .menu{
+  background: rgba(115, 84, 46,0.9);
+} */
+
+.menu {
+  background: url(../img/menu-background.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .menu #menu-flters {
   padding: 0;
   margin: 0 auto 0 auto;
@@ -876,7 +889,6 @@ section {
 }
 
 .menu .menu-content::after {
-  content: "......................................................................" "...................................................................." "....................................................................";
   position: absolute;
   left: 20px;
   right: 0;
@@ -888,16 +900,15 @@ section {
 
 .menu .menu-content a {
   padding-right: 10px;
-  background: #fff;
   position: relative;
   z-index: 3;
   font-weight: 700;
-  color: #ff9b08;
+  color: white;
 }
 
 .menu .menu-content span {
-  background: #fff;
   position: relative;
+  color: white;
   z-index: 3;
   padding: 0 10px;
   font-weight: 600;
@@ -907,7 +918,7 @@ section {
   font-style: italic;
   font-size: 14px;
   font-family: "Comic Neue", sans-serif;
-  color: #948c81;
+  color: white;
 }
 
 /*--------------------------------------------------------------
